@@ -1,4 +1,48 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18D109" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Endereco" representedClassName="Endereco" syncable="YES" codeGenerationType="class">
+        <attribute name="bairro" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cidade" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="complemento" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="endereco" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="estado" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="idLogradouro" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="idPessoa" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="idTipoEndereco" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="enderecoLogradouro" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Logradouro" syncable="YES"/>
+        <relationship name="enderecoTipoEndereco" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TipoEndereco" syncable="YES"/>
+    </entity>
+    <entity name="Logradouro" representedClassName="Logradouro" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Pessoa" representedClassName="Pessoa" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="pessoaEndereco" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Endereco" syncable="YES"/>
+        <relationship name="pessoaTelefone" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Telefone" syncable="YES"/>
+    </entity>
+    <entity name="Telefone" representedClassName="Telefone" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="idTipoTelefone" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="telefone" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="telefoneTipoTelefone" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TipoTelefone" syncable="YES"/>
+    </entity>
+    <entity name="TipoEndereco" representedClassName="TipoEndereco" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="TipoTelefone" representedClassName="TipoTelefone" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Pessoa" positionX="111.984375" positionY="-447.1953125" width="128" height="103"/>
+        <element name="TipoEndereco" positionX="-157.3203125" positionY="-12.421875" width="128" height="73"/>
+        <element name="Endereco" positionX="-52.9140625" positionY="-296.93359375" width="128" height="208"/>
+        <element name="Logradouro" positionX="90.87890625" positionY="-5.4609375" width="128" height="73"/>
+        <element name="TipoTelefone" positionX="197.453125" positionY="-111.06640625" width="128" height="75"/>
+        <element name="Telefone" positionX="300.09765625" positionY="-275.515625" width="128" height="105"/>
+    </elements>
 </model>
