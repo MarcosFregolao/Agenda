@@ -11,22 +11,28 @@
         <attribute name="idPessoa" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="idTipoEndereco" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="enderecoLogradouro" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Logradouro" syncable="YES"/>
+        <relationship name="enderecoPessoa" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Pessoa" inverseName="pessoaEndereco" inverseEntity="Pessoa" syncable="YES"/>
         <relationship name="enderecoTipoEndereco" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TipoEndereco" syncable="YES"/>
     </entity>
+    <entity name="Entity" representedClassName="Entity" syncable="YES" codeGenerationType="class"/>
     <entity name="Logradouro" representedClassName="Logradouro" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="Pessoa" representedClassName="Pessoa" syncable="YES" codeGenerationType="class">
+    <entity name="NovaEntidade" representedClassName="NovaEntidade" syncable="YES" codeGenerationType="class"/>
+    <entity name="Pessoa" representedClassName=".Pessoa" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="pessoaEndereco" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Endereco" syncable="YES"/>
+        <relationship name="pessoaEndereco" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Endereco" inverseName="enderecoPessoa" inverseEntity="Endereco" syncable="YES"/>
         <relationship name="pessoaTelefone" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Telefone" syncable="YES"/>
     </entity>
     <entity name="Telefone" representedClassName="Telefone" syncable="YES" codeGenerationType="class">
+        <attribute name="ddd" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="ddi" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="idTipoTelefone" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="telefone" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="pessoas" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Telefone" inverseName="pessoas" inverseEntity="Telefone" syncable="YES"/>
         <relationship name="telefoneTipoTelefone" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TipoTelefone" syncable="YES"/>
     </entity>
     <entity name="TipoEndereco" representedClassName="TipoEndereco" syncable="YES" codeGenerationType="class">
@@ -36,13 +42,16 @@
     <entity name="TipoTelefone" representedClassName="TipoTelefone" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="telefones" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TipoTelefone" inverseName="telefones" inverseEntity="TipoTelefone" syncable="YES"/>
     </entity>
     <elements>
         <element name="Pessoa" positionX="111.984375" positionY="-447.1953125" width="128" height="103"/>
         <element name="TipoEndereco" positionX="-157.3203125" positionY="-12.421875" width="128" height="73"/>
-        <element name="Endereco" positionX="-52.9140625" positionY="-296.93359375" width="128" height="208"/>
+        <element name="Endereco" positionX="-52.9140625" positionY="-296.93359375" width="128" height="223"/>
         <element name="Logradouro" positionX="90.87890625" positionY="-5.4609375" width="128" height="73"/>
-        <element name="TipoTelefone" positionX="197.453125" positionY="-111.06640625" width="128" height="75"/>
-        <element name="Telefone" positionX="300.09765625" positionY="-275.515625" width="128" height="105"/>
+        <element name="TipoTelefone" positionX="197.453125" positionY="-111.06640625" width="128" height="88"/>
+        <element name="Telefone" positionX="300.09765625" positionY="-275.515625" width="128" height="148"/>
+        <element name="NovaEntidade" positionX="210.18359375" positionY="146.91796875" width="128" height="43"/>
+        <element name="Entity" positionX="36.14453125" positionY="154.6171875" width="128" height="43"/>
     </elements>
 </model>
