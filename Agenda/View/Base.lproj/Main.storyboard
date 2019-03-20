@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6iX-x7-UPn">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Eqj-5V-Z0W">
+            <objects>
+                <navigationController id="6iX-x7-UPn" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lAG-vM-UxZ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="wpl-kO-hb4" kind="relationship" relationship="rootViewController" id="AHe-uE-HJl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7AR-pB-Kpn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-58" y="-546"/>
+        </scene>
+        <!--Agenda-->
+        <scene sceneID="yyp-Oq-zh3">
+            <objects>
+                <viewController id="wpl-kO-hb4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h3u-oD-Rqb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1pm-gn-cbX">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="AgendaLaunch" translatesAutoresizingMaskIntoConstraints="NO" id="2Kq-bh-1sb">
+                                        <rect key="frame" x="-123" y="0.0" width="620" height="603"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="620" id="MjH-ZJ-RGr"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="330" id="N2H-60-Lxb"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="600" id="OFd-dU-vAd"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="600" id="UYJ-fT-kjg"/>
+                                            <constraint firstAttribute="width" secondItem="2Kq-bh-1sb" secondAttribute="height" multiplier="620:603" id="gTt-qq-IZi"/>
+                                            <constraint firstAttribute="height" constant="330" id="zjf-XR-Xtw"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ne-Mo-sMG">
+                                        <rect key="frame" x="72" y="384" width="238" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="tqj-DT-WwY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <state key="normal" title="Lista de contatos"/>
+                                        <connections>
+                                            <segue destination="gv4-oe-yZO" kind="show" id="4bD-4l-eUs"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="2Ne-Mo-sMG" firstAttribute="top" secondItem="2Kq-bh-1sb" secondAttribute="bottom" constant="46" id="6cX-3O-KCh"/>
+                                    <constraint firstItem="2Ne-Mo-sMG" firstAttribute="leading" secondItem="1pm-gn-cbX" secondAttribute="leading" constant="110" id="Nug-Ll-4Bf"/>
+                                    <constraint firstAttribute="trailing" secondItem="2Ne-Mo-sMG" secondAttribute="trailing" constant="110" id="PWm-Df-0z5"/>
+                                    <constraint firstItem="2Kq-bh-1sb" firstAttribute="top" secondItem="1pm-gn-cbX" secondAttribute="top" constant="8" id="TG1-Qk-pFL"/>
+                                    <constraint firstItem="2Kq-bh-1sb" firstAttribute="leading" secondItem="1pm-gn-cbX" secondAttribute="leading" constant="-122.5" id="gz8-1l-KWu"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="4fV-Oc-urZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Agenda" id="F9Q-Yt-HDP">
+                        <barButtonItem key="backBarButtonItem" title="Voltar" id="Y81-i3-Psu"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qa5-s6-h9S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="967" y="-546"/>
+        </scene>
+        <!--Lista de contatos-->
+        <scene sceneID="uDD-gJ-md0">
+            <objects>
+                <viewController id="gv4-oe-yZO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="guu-qG-L2n">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Tgc-dD-QAx">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="i1h-O4-Yem"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Lista de contatos" id="3nU-cg-KcZ">
+                        <barButtonItem key="backBarButtonItem" title="Voltar" id="bVV-Zt-uex"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ZCG-Qq-Yfw"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WlZ-WI-GJK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1968.8" y="-546.47676161919048"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AgendaLaunch" width="275" height="183"/>
+    </resources>
+</document>

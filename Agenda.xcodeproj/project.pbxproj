@@ -37,6 +37,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13C4852B2242F62800008869 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				13C6584C22405C51009C0EFA /* Main.storyboard */,
+				13C6585222405C52009C0EFA /* Assets.xcassets */,
+				13C6585422405C52009C0EFA /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		13C4852C224307BE00008869 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		13C4852D224307CC00008869 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				13C6584822405C51009C0EFA /* AppDelegate.swift */,
+				13C6584A22405C51009C0EFA /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		13C4852E224307DF00008869 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				13C6584F22405C51009C0EFA /* Agenda.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		13C6583C22405C51009C0EFA = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +90,11 @@
 		13C6584722405C51009C0EFA /* Agenda */ = {
 			isa = PBXGroup;
 			children = (
-				13C6584822405C51009C0EFA /* AppDelegate.swift */,
-				13C6584A22405C51009C0EFA /* ViewController.swift */,
-				13C6584C22405C51009C0EFA /* Main.storyboard */,
-				13C6585222405C52009C0EFA /* Assets.xcassets */,
-				13C6585422405C52009C0EFA /* LaunchScreen.storyboard */,
+				13C4852C224307BE00008869 /* ViewModel */,
+				13C4852E224307DF00008869 /* Model */,
+				13C4852D224307CC00008869 /* Controller */,
+				13C4852B2242F62800008869 /* View */,
 				13C6585722405C52009C0EFA /* Info.plist */,
-				13C6584F22405C51009C0EFA /* Agenda.xcdatamodeld */,
 			);
 			path = Agenda;
 			sourceTree = "<group>";
