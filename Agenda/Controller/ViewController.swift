@@ -15,18 +15,19 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    /*
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "quiz" {
-            let next = segue.destination as! QuizViewController
-            next.quiz = quiz
+            let next = segue.destination as! listaContatosViewController
+            //next.quiz = quiz
         }
+    /*
         else if segue.identifier == "editar" {
             let next = segue.destination as! QuestionTableViewController
             next.quiz = quiz
         }
-    }
     */
+    }
     
 }
 
