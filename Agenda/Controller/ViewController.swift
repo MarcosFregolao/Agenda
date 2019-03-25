@@ -17,7 +17,7 @@ class ViewController: UIViewController {
 
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "quiz" {
+        if segue.identifier == "listaContatos" {
             let next = segue.destination as! listaContatosViewController
             //next.quiz = quiz
         }

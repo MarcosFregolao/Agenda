@@ -49,13 +49,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		13C4852C224307BE00008869 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		13C4852D224307CC00008869 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -93,7 +86,6 @@
 		13C6584722405C51009C0EFA /* Agenda */ = {
 			isa = PBXGroup;
 			children = (
-				13C4852C224307BE00008869 /* ViewModel */,
 				13C4852E224307DF00008869 /* Model */,
 				13C4852D224307CC00008869 /* Controller */,
 				13C4852B2242F62800008869 /* View */,
@@ -331,7 +323,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.pucpr.Agenda;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -348,7 +340,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.pucpr.Agenda;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
