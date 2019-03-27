@@ -14,6 +14,11 @@
 		13C6585122405C51009C0EFA /* Agenda.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 13C6584F22405C51009C0EFA /* Agenda.xcdatamodeld */; };
 		13C6585322405C52009C0EFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13C6585222405C52009C0EFA /* Assets.xcassets */; };
 		13C6585622405C52009C0EFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13C6585422405C52009C0EFA /* LaunchScreen.storyboard */; };
+		57C6DE9F224BE2BE00BD0DD5 /* ContatosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C6DE9E224BE2BE00BD0DD5 /* ContatosTableViewController.swift */; };
+		57C6DEA1224BE32300BD0DD5 /* EnderecosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C6DEA0224BE32300BD0DD5 /* EnderecosTableViewController.swift */; };
+		57C6DEA3224BE40D00BD0DD5 /* ContatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C6DEA2224BE40D00BD0DD5 /* ContatoViewController.swift */; };
+		57C6DEA5224BE45500BD0DD5 /* addEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C6DEA4224BE45500BD0DD5 /* addEditViewController.swift */; };
+		57C6DEA7224BE5A800BD0DD5 /* ContatoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C6DEA6224BE5A800BD0DD5 /* ContatoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		13C6585222405C52009C0EFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13C6585522405C52009C0EFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13C6585722405C52009C0EFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57C6DE9E224BE2BE00BD0DD5 /* ContatosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatosTableViewController.swift; sourceTree = "<group>"; };
+		57C6DEA0224BE32300BD0DD5 /* EnderecosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnderecosTableViewController.swift; sourceTree = "<group>"; };
+		57C6DEA2224BE40D00BD0DD5 /* ContatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoViewController.swift; sourceTree = "<group>"; };
+		57C6DEA4224BE45500BD0DD5 /* addEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addEditViewController.swift; sourceTree = "<group>"; };
+		57C6DEA6224BE5A800BD0DD5 /* ContatoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +53,11 @@
 			isa = PBXGroup;
 			children = (
 				13C6584C22405C51009C0EFA /* Main.storyboard */,
+				57C6DEA6224BE5A800BD0DD5 /* ContatoTableViewCell.swift */,
+				57C6DEA4224BE45500BD0DD5 /* addEditViewController.swift */,
+				57C6DEA2224BE40D00BD0DD5 /* ContatoViewController.swift */,
+				57C6DEA0224BE32300BD0DD5 /* EnderecosTableViewController.swift */,
+				57C6DE9E224BE2BE00BD0DD5 /* ContatosTableViewController.swift */,
 				13C6585222405C52009C0EFA /* Assets.xcassets */,
 				13C6585422405C52009C0EFA /* LaunchScreen.storyboard */,
 			);
@@ -165,9 +180,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57C6DEA7224BE5A800BD0DD5 /* ContatoTableViewCell.swift in Sources */,
 				13C6585122405C51009C0EFA /* Agenda.xcdatamodeld in Sources */,
 				13C485332243102C00008869 /* listaContatosViewController.swift in Sources */,
+				57C6DEA1224BE32300BD0DD5 /* EnderecosTableViewController.swift in Sources */,
+				57C6DEA3224BE40D00BD0DD5 /* ContatoViewController.swift in Sources */,
+				57C6DEA5224BE45500BD0DD5 /* addEditViewController.swift in Sources */,
 				13C6584B22405C51009C0EFA /* ViewController.swift in Sources */,
+				57C6DE9F224BE2BE00BD0DD5 /* ContatosTableViewController.swift in Sources */,
 				13C6584922405C51009C0EFA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,13 +13,13 @@
         <!--Agenda de Endereços-->
         <scene sceneID="jcD-qO-x3W">
             <objects>
-                <tableViewController id="Wmy-1i-PEI" sceneMemberID="viewController">
+                <tableViewController id="Wmy-1i-PEI" customClass="ContatosTableViewController" customModule="Agenda" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Caj-PQ-6sK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" rowHeight="90" id="Mak-rz-aN2">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" rowHeight="90" id="Mak-rz-aN2" customClass="ContatoTableViewCell" customModule="Agenda" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mak-rz-aN2" id="YQj-Uc-9FH">
@@ -33,7 +33,7 @@
                                                 <constraint firstAttribute="width" constant="51" id="hBo-K2-L2o"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Endereço" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fM-5V-yUS">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enderecos" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fM-5V-yUS">
                                             <rect key="frame" x="71" y="38" width="254" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="AM0-ww-dzr"/>
@@ -72,7 +72,13 @@
                             <outlet property="delegate" destination="Wmy-1i-PEI" id="fyX-lE-5Q6"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Agenda de Endereços" id="Twh-dG-UtP"/>
+                    <navigationItem key="navigationItem" title="Agenda de Endereços" id="Twh-dG-UtP">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="X2S-ev-RXF">
+                            <connections>
+                                <segue destination="rgw-q8-iOe" kind="show" id="kkQ-jc-v7s"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A9s-ec-LES" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -81,7 +87,7 @@
         <!--Detalhes do Contato-->
         <scene sceneID="3a3-ec-JZK">
             <objects>
-                <tableViewController id="jJ0-1X-Qei" sceneMemberID="viewController">
+                <tableViewController id="jJ0-1X-Qei" customClass="EnderecosTableViewController" customModule="Agenda" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zac-bu-LqM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -110,7 +116,13 @@
                             <outlet property="delegate" destination="jJ0-1X-Qei" id="eqY-ou-TAE"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Detalhes do Contato" id="zw8-2V-xdM"/>
+                    <navigationItem key="navigationItem" title="Detalhes do Contato" id="zw8-2V-xdM">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="O2W-Wc-X5Q">
+                            <connections>
+                                <action selector="addEndereco:" destination="jJ0-1X-Qei" id="A3P-aq-Gyz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3cj-zd-xEr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -150,10 +162,10 @@
             </objects>
             <point key="canvasLocation" x="119" y="59"/>
         </scene>
-        <!--View Controller-->
+        <!--Contato View Controller-->
         <scene sceneID="lBZ-HI-lQb">
             <objects>
-                <viewController id="HGA-ut-BFX" sceneMemberID="viewController">
+                <viewController id="HGA-ut-BFX" customClass="ContatoViewController" customModule="Agenda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="utg-r2-Fg0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -196,6 +208,11 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imgFoto" destination="G6s-fR-OlT" id="mAM-43-hIn"/>
+                        <outlet property="lblEndereco" destination="Uep-Ia-GC8" id="AjB-8k-0Jd"/>
+                        <outlet property="lblNome" destination="kgz-M7-ifN" id="2SA-6h-TTJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b0S-mP-uuc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -204,7 +221,7 @@
         <!--Editar endereço-->
         <scene sceneID="PpE-zo-Ozx">
             <objects>
-                <viewController id="rgw-q8-iOe" sceneMemberID="viewController">
+                <viewController id="rgw-q8-iOe" customClass="addEditViewController" customModule="Agenda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ozO-DE-coE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -234,7 +251,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sFm-qi-z1O">
-                                <rect key="frame" x="16" y="562" width="343" height="40"/>
+                                <rect key="frame" x="16" y="518" width="343" height="40"/>
                                 <color key="backgroundColor" red="0.31764705879999999" green="0.69411764710000001" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="jgn-PU-P61"/>
@@ -244,7 +261,7 @@
                                 </state>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sor-Ou-AS0">
-                                <rect key="frame" x="16" y="336" width="343" height="218"/>
+                                <rect key="frame" x="16" y="336" width="343" height="179"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n4L-QP-6uX">
                                 <rect key="frame" x="164" y="430" width="46" height="30"/>
@@ -261,7 +278,6 @@
                             <constraint firstItem="fEh-vx-jTM" firstAttribute="leading" secondItem="fxe-Uw-dmd" secondAttribute="leading" constant="16" id="GPo-dP-DVv"/>
                             <constraint firstItem="sFm-qi-z1O" firstAttribute="top" secondItem="Sor-Ou-AS0" secondAttribute="bottom" constant="20" id="HEv-TC-szp"/>
                             <constraint firstItem="Sor-Ou-AS0" firstAttribute="leading" secondItem="fxe-Uw-dmd" secondAttribute="leading" constant="16" id="HHW-bY-TWQ"/>
-                            <constraint firstItem="sFm-qi-z1O" firstAttribute="top" secondItem="Sor-Ou-AS0" secondAttribute="bottom" constant="4" id="Hlc-YP-0eP"/>
                             <constraint firstItem="fEh-vx-jTM" firstAttribute="top" secondItem="P4D-w6-O2c" secondAttribute="bottom" constant="10" id="Ihy-m6-wjP"/>
                             <constraint firstItem="Sor-Ou-AS0" firstAttribute="top" secondItem="TS3-9N-iCb" secondAttribute="bottom" constant="4" id="KsC-G5-Sva"/>
                             <constraint firstItem="n4L-QP-6uX" firstAttribute="centerX" secondItem="ozO-DE-coE" secondAttribute="centerX" id="RH1-lO-oYZ"/>
@@ -277,7 +293,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fxe-Uw-dmd"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Editar endereço" id="PEN-gO-k1o"/>
+                    <toolbarItems>
+                        <barButtonItem systemItem="add" id="EfO-jx-VI6"/>
+                        <barButtonItem systemItem="add" id="1P7-rF-oTs"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Editar endereço" largeTitleDisplayMode="never" id="PEN-gO-k1o"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="btnFoto" destination="n4L-QP-6uX" id="62O-GC-4in"/>
+                        <outlet property="btnSalvar" destination="sFm-qi-z1O" id="mKq-6E-1o7"/>
+                        <outlet property="imgFoto" destination="Sor-Ou-AS0" id="Amb-iR-xde"/>
+                        <outlet property="txtEndereco" destination="fEh-vx-jTM" id="xic-5h-Bcn"/>
+                        <outlet property="txtNome" destination="P4D-w6-O2c" id="YXP-f0-s7c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NmT-2k-ghq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -289,6 +317,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="2Wx-uI-XsW" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZuZ-IY-t1O">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -302,4 +331,7 @@
             <point key="canvasLocation" x="1433" y="-917"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="kkQ-jc-v7s"/>
+    </inferredMetricsTieBreakers>
 </document>
